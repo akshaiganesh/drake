@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Terminal, Play, Cpu, Brain, Eye, Volume2, Sparkles, ArrowUpRight } from 'lucide-react';
+import { Terminal, Play, Cpu, Brain, Sparkles, ArrowUpRight, Workflow, Bot, FileText } from 'lucide-react';
 
 function GithubIcon({ className = "w-4 h-4" }) {
   return (
@@ -12,77 +12,77 @@ function GithubIcon({ className = "w-4 h-4" }) {
 }
 
 export default function FeatureCards() {
-  const [activeProject, setActiveProject] = useState('llm-rag');
+  const [activeProject, setActiveProject] = useState('n8n-automation');
   const [isInferring, setIsInferring] = useState(false);
   const [inferenceLogs, setInferenceLogs] = useState([]);
 
   const projects = [
     {
-      id: 'llm-rag',
-      title: 'Agentic RAG & Fine-tuned LLM',
-      category: 'NLP & Large Language Models',
-      badge: '01 / RAG & Agents',
+      id: 'n8n-automation',
+      title: 'n8n & Python Automation Workflows',
+      category: 'Automation & Bots',
+      badge: '01 / Automation',
+      icon: Workflow,
+      color: 'bg-amber-50 text-amber-700 border-amber-200',
+      description: 'Built automated workflow pipelines connecting Telegram bots, HTTP webhooks, custom Python scripts, and background API services to automate repetitive tasks.',
+      tags: ['n8n', 'Python', 'Telegram API', 'Webhooks', 'REST APIs'],
+      logs: [
+        '⚡ Webhook trigger received from Telegram bot @ 23:35:10...',
+        '⚙️ n8n executing Python data parsing node...',
+        '📡 Calling external API endpoint to process payload...',
+        '📝 Syncing processed output to database & sending notification...',
+        '✅ Automation flow completed successfully in 320ms!'
+      ]
+    },
+    {
+      id: 'local-ai',
+      title: 'Local AI Models & Fine-Tuning Experiments',
+      category: 'AI & Machine Learning',
+      badge: '02 / Local LLMs',
       icon: Brain,
       color: 'bg-blue-50 text-blue-700 border-blue-200',
-      description: 'Built a specialized Retrieval-Augmented Generation (RAG) system with a fine-tuned Llama-3 8B model using QLoRA. Capable of multi-step document reasoning, vector search via Qdrant, and tool use.',
-      tags: ['PyTorch', 'HuggingFace', 'LangChain', 'Qdrant', 'QLoRA', 'Python'],
+      description: 'Experimenting with running open-source LLMs locally using Ollama and LM Studio. Testing model fine-tuning with LoRA adapters and custom prompt templates.',
+      tags: ['Local AI', 'Ollama', 'LM Studio', 'HuggingFace', 'LoRA', 'PyTorch'],
       logs: [
-        '🔍 Embedding query with BGE-large-en-v1.5...',
-        '📚 Searching Qdrant Vector DB (Cosine similarity: 0.942)...',
-        '🧠 Passing 4 retrieved context chunks to Llama-3-8B-Instruct...',
-        '⚡ Executing Python code tool for math computation...',
-        '✅ Generated accurate answer with citation sources [Doc 3, p. 14]!'
+        '🦙 Ingesting Llama-3-8B-Instruct GGUF via Ollama runtime...',
+        '⚡ Allocating 6.2 GB VRAM on local GPU...',
+        '🧠 Running prompt template with custom context injection...',
+        '📊 Token generation speed: 45 tokens/sec...',
+        '✅ Output generated locally without cloud latency.'
       ]
     },
     {
-      id: 'vision-tracking',
-      title: 'Real-Time Edge Object Detection',
-      category: 'Computer Vision & Deep Learning',
-      badge: '02 / Perception',
-      icon: Eye,
-      color: 'bg-emerald-50 text-emerald-700 border-emerald-200',
-      description: 'High-throughput computer vision pipeline using YOLOv8 + DeepSORT for multi-object tracking. Optimized TensorRT engine running at 120+ FPS on GPU with minimal latency.',
-      tags: ['PyTorch', 'YOLOv8', 'TensorRT', 'OpenCV', 'CUDA', 'C++'],
+      id: 'ai-agents',
+      title: 'AI Agents & Custom Developer Tooling',
+      category: 'Agents & Bots',
+      badge: '03 / AI Agents',
+      icon: Bot,
+      color: 'bg-indigo-50 text-indigo-700 border-indigo-200',
+      description: 'Creating autonomous agent scripts that use tool-calling APIs to read files, run terminal commands, format data, and answer questions.',
+      tags: ['AI Agents', 'Python', 'OpenAI API', 'Tool Calling', 'CLI Tools'],
       logs: [
-        '📹 Ingesting RTSP video stream @ 1080p 60FPS...',
-        '⚡ TensorRT FP16 engine initialized on CUDA core 0...',
-        '🎯 Detected: 14 Vehicles, 6 Pedestrians, 2 Bicycles (Avg Conf: 0.96)',
-        '🔄 DeepSORT Kalman filter updated track IDs [ID #402, ID #403]',
-        '✅ Outputting bounding boxes and trajectory metadata.'
+        '🤖 Agent initialized with 3 tools: [Search, CodeExec, FileRead]...',
+        '🔍 Agent evaluating user objective: "Extract links from markdown file"',
+        '💻 Executing Python regex tool on target file...',
+        'Output verified. Formatting response into JSON summary...',
+        '✅ Agent finished task autonomously.'
       ]
     },
     {
-      id: 'audio-diff',
-      title: 'Neural Audio & Speech Synthesis',
-      category: 'Generative AI & Audio',
-      badge: '03 / Generative AI',
-      icon: Volume2,
+      id: 'second-brain',
+      title: 'Notion & Obsidian Knowledge Vault Sync',
+      category: 'Productivity & Tooling',
+      badge: '04 / Knowledge Vault',
+      icon: FileText,
       color: 'bg-purple-50 text-purple-700 border-purple-200',
-      description: 'Latent diffusion model for acoustic spectrum generation and zero-shot voice synthesis. Trained custom HiFi-GAN vocoder for crystal-clear 44.1kHz audio reconstruction.',
-      tags: ['PyTorch', 'Diffusion Models', 'HiFi-GAN', 'Librosa', 'WandB'],
+      description: 'Custom Python scripts that bridge Notion databases with local Obsidian markdown vaults for automated note organization, tagging, and study summaries.',
+      tags: ['Notion API', 'Obsidian', 'Python', 'Markdown', 'Automation'],
       logs: [
-        '🎵 Extracting Mel-spectrogram features from 5 sec audio clip...',
-        '🌀 Running 50 DDPIM diffusion sampling steps in latent space...',
-        '🎛️ HiFi-GAN vocoder converting spectrogram to raw PCM audio...',
-        '📊 PESQ speech quality score evaluated: 4.12 / 4.5',
-        '✅ Audio waveform generated successfully.'
-      ]
-    },
-    {
-      id: 'rl-drone',
-      title: 'Autonomous RL Flight Controller',
-      category: 'Reinforcement Learning',
-      badge: '04 / RL & Control',
-      icon: Cpu,
-      color: 'bg-amber-50 text-amber-700 border-amber-200',
-      description: 'Proximal Policy Optimization (PPO) agent trained in PyBullet physics simulation to stabilize quadcopter flight under turbulent wind conditions.',
-      tags: ['PyTorch', 'PPO Algorithm', 'PyBullet', 'Gymnasium', 'NumPy'],
-      logs: [
-        '🚁 Spawning quadcopter state vector [position, velocity, orientation]...',
-        '🌪️ Simulating 15 m/s turbulent wind disturbance...',
-        '🧠 PPO actor-critic network predicting motor PWM duty cycles...',
-        '🎯 Reward function: Altitude drift < 0.02m (Episodic Return: +840)',
-        '✅ Flight trajectory stabilized in 12ms reaction window.'
+        '📚 Fetching modified pages from Notion workspace...',
+        '🔄 Converting Notion blocks into clean Markdown syntax...',
+        '📂 Saving files into Obsidian /AI-ML-Vault directory...',
+        '🏷️ Updating internal bi-directional wikilinks [[Local-AI]]...',
+        '✅ Vault sync completed: 18 notes updated.'
       ]
     }
   ];
@@ -111,13 +111,13 @@ export default function FeatureCards() {
         <div className="flex flex-col items-center text-center max-w-[680px] mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#202020]/5 border border-[#202020]/10 text-[#202020] font-mono text-xs mb-3">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>AI/ML Projects Showcase</span>
+            <span>Projects & Experiments</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-normal text-[#202020] tracking-tight">
-            Hands-on AI & Deep Learning Projects
+            Things I’m Building & Experimenting With
           </h2>
           <p className="mt-3 text-[#202020]/60 text-sm md:text-base font-normal">
-            Explore interactive project demos, architectural details, and model outputs built with PyTorch, CUDA, and modern ML frameworks.
+            A look at my hands-on projects — from n8n automation workflows and Python bots to local LLM setups and Notion/Obsidian knowledge pipelines.
           </p>
         </div>
 
@@ -175,7 +175,7 @@ export default function FeatureCards() {
                   {currentProj.description}
                 </p>
 
-                {/* Tech Stack Tags */}
+                {/* Tech Tags */}
                 <div className="flex flex-wrap gap-2 mb-8">
                   {currentProj.tags.map((tag) => (
                     <span
@@ -196,7 +196,7 @@ export default function FeatureCards() {
                   className="cta-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs md:text-sm font-medium transition-all disabled:opacity-50"
                 >
                   <Play className={`w-4 h-4 text-[#FBFBF8] ${isInferring ? 'animate-spin' : ''}`} />
-                  <span>{isInferring ? 'Running Model Inference...' : 'Run Interactive Demo'}</span>
+                  <span>{isInferring ? 'Simulating Workflow...' : 'Simulate Workflow'}</span>
                 </button>
 
                 <a
@@ -224,11 +224,11 @@ export default function FeatureCards() {
                     <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
                   </div>
                   <span className="text-xs text-[#202020]/60 ml-2 font-mono">
-                    model_eval.py --cuda
+                    workflow_runner.py
                   </span>
                 </div>
                 <span className="text-[10px] text-emerald-800 border border-emerald-300 px-2 py-0.5 rounded bg-emerald-50">
-                  GPU 0: RTX 4090
+                  Status: Active
                 </span>
               </div>
 
@@ -237,7 +237,7 @@ export default function FeatureCards() {
                 {inferenceLogs.length === 0 ? (
                   <div className="h-full flex flex-col items-center justify-center text-center py-8 text-[#202020]/40">
                     <Terminal className="w-8 h-8 mb-2 text-[#202020]/30 animate-pulse" />
-                    <p className="text-xs">Click "Run Interactive Demo" to simulate live model inferencing.</p>
+                    <p className="text-xs">Click "Simulate Workflow" to run this project in action.</p>
                   </div>
                 ) : (
                   inferenceLogs.map((log, index) => (
@@ -256,8 +256,8 @@ export default function FeatureCards() {
 
               {/* Terminal Footer Info */}
               <div className="pt-3 border-t border-[#202020]/10 flex items-center justify-between text-[11px] text-[#202020]/50 font-mono">
-                <span>Status: {isInferring ? 'INFERRING...' : 'READY'}</span>
-                <span>PyTorch 2.3 + CUDA 12.1</span>
+                <span>Mindset: Learn by Building</span>
+                <span>Python 3.12 + n8n</span>
               </div>
 
             </div>

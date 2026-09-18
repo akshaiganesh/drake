@@ -14,7 +14,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="site-header fixed top-0 left-0 right-0 z-[201] flex justify-center bg-[#FBFBF8]/80 backdrop-blur-md border-b border-[#202020]/10 transition-all">
+    <header className="site-header fixed top-0 left-0 right-0 z-[201] flex justify-center bg-[#FBFBF8]/85 backdrop-blur-md border-b border-[#202020]/10 transition-all">
       <div className="w-full max-w-[1440px] mx-auto px-5 md:px-8 py-4 flex items-center justify-between">
         
         {/* Retro Pixel Brand Logo */}
@@ -30,20 +30,20 @@ export default function Header() {
             <path d="M31.2299 22.0107H25.4373V20.8578H24.2774V19.6979H23.1175V17.378H21.9646V13.9053H23.1175V11.5854H24.2774V10.4255H25.4373V9.26556H31.2299V10.4255H32.3899V11.5854H33.5498V13.9053H34.7097V17.378H33.5498V19.6979H32.3899V20.8578H31.2299V22.0107ZM26.5973 20.8578H30.07V19.6979H31.2299V17.378H32.3899V13.9053H31.2299V10.4255H26.5973V11.5854H25.4373V13.9053H24.2774V17.378H25.4373V19.6979H26.5973V20.8578Z" fill="#202020"/>
             <path d="M20.2178 8.10526H19.0579V6.9524H17.9051V5.79246H16.7451V4.63253H9.79259V3.4726H19.0579V5.79246H20.2178V8.10526ZM9.79259 20.8575H7.47273V19.6975H6.31279V18.5376H5.15286V16.2177H4V9.26519H5.15286V6.9524H6.31279V5.79246H7.47273V4.63253H9.79259V5.79246H8.63266V6.9524H7.47273V9.26519H6.31279V16.2177H7.47273V18.5376H8.63266V19.6975H9.79259V20.8575ZM19.0579 22.0103H9.79259V20.8575H16.7451V19.6975H17.9051V18.5376H19.0579V17.3777H20.2178V19.6975H19.0579V22.0103Z" fill="#202020"/>
           </svg>
-          <span className="text-xs font-mono text-[#202020]/60 border-l border-[#202020]/20 pl-3 hidden sm:inline">Portfolio</span>
+          <span className="text-xs font-mono text-[#202020]/60 border-l border-[#202020]/20 pl-3 hidden sm:inline">17y/o Student</span>
         </a>
 
-        {/* Desktop Glass Pill Navigation */}
+        {/* Desktop Navigation */}
         <nav className="hidden min-[1000px]:flex items-center gap-3">
           <div className="relative flex h-[41px] items-center px-3 rounded-[8px] glass-pill-dark gap-1">
-            <span className="text-[15px] font-[410] text-[#202020]/60 px-2 cursor-default font-mono">Portfolio</span>
+            <span className="text-[15px] font-[410] text-[#202020]/60 px-2 cursor-default font-mono">My Journey</span>
             <div className="w-[1px] h-4 bg-[#202020]/20 my-auto" />
             
-            <a href="#projects" className="text-[15px] font-[410] text-[#202020] hover:text-black px-2 py-1 transition-colors">Projects</a>
+            <a href="#projects" className="text-[15px] font-[410] text-[#202020] hover:text-black px-2 py-1 transition-colors">Projects & Bots</a>
             <div className="w-[1px] h-3 bg-[#202020]/20 my-auto" />
-            <a href="#curriculum" className="text-[15px] font-[410] text-[#202020] hover:text-black px-2 py-1 transition-colors">Chapters</a>
+            <a href="#curriculum" className="text-[15px] font-[410] text-[#202020] hover:text-black px-2 py-1 transition-colors">Learning Chapters</a>
             <div className="w-[1px] h-3 bg-[#202020]/20 my-auto" />
-            <a href="#contact" className="text-[15px] font-[410] text-[#202020] hover:text-black px-2 py-1 transition-colors">Contact</a>
+            <a href="#contact" className="text-[15px] font-[410] text-[#202020] hover:text-black px-2 py-1 transition-colors">Connect</a>
           </div>
 
           <a
@@ -53,11 +53,11 @@ export default function Header() {
             className="cta-btn inline-flex items-center gap-2 h-[41px] px-5 rounded-[8px] text-[15px] font-[460]"
           >
             <GithubIcon className="w-4 h-4 text-[#FBFBF8]" />
-            <span>GitHub Profile</span>
+            <span>GitHub</span>
           </a>
         </nav>
 
-        {/* Mobile menu trigger */}
+        {/* Mobile trigger */}
         <div className="flex items-center min-[1000px]:hidden gap-3">
           <a
             href="https://github.com/akshaiganesh/drake"
@@ -81,11 +81,11 @@ export default function Header() {
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div className="min-[1000px]:hidden fixed top-[68px] left-0 right-0 bg-[#FBFBF8]/95 border-b border-[#202020]/10 p-6 backdrop-blur-xl flex flex-col gap-4 text-[#202020] shadow-xl">
-          <span className="text-xs uppercase font-mono text-[#202020]/50">Portfolio Sections</span>
+          <span className="text-xs uppercase font-mono text-[#202020]/50">Portfolio Navigation</span>
           <div className="grid grid-cols-2 gap-2">
-            <a href="#projects" onClick={() => setMobileMenuOpen(false)} className="p-3 bg-[#F5F5F2] rounded-lg text-sm font-medium">Projects</a>
-            <a href="#curriculum" onClick={() => setMobileMenuOpen(false)} className="p-3 bg-[#F5F5F2] rounded-lg text-sm font-medium">Chapters</a>
-            <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="p-3 bg-[#F5F5F2] rounded-lg text-sm font-medium">Contact</a>
+            <a href="#projects" onClick={() => setMobileMenuOpen(false)} className="p-3 bg-[#F5F5F2] rounded-lg text-sm font-medium">Projects & Bots</a>
+            <a href="#curriculum" onClick={() => setMobileMenuOpen(false)} className="p-3 bg-[#F5F5F2] rounded-lg text-sm font-medium">Learning Chapters</a>
+            <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="p-3 bg-[#F5F5F2] rounded-lg text-sm font-medium">Connect</a>
             <a href="https://github.com/akshaiganesh/drake" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="p-3 bg-[#202020] text-white rounded-lg text-sm font-medium">GitHub</a>
           </div>
         </div>

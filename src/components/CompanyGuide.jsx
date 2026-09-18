@@ -7,8 +7,8 @@ export default function CompanyGuide() {
       id: 'chapter-1',
       num: 'Chapter 1',
       roman: 'Chapter I',
-      title: 'Chapter 1\nHow To Start',
-      subtitle: 'Building AI/ML foundations, mathematics, and learning core frameworks.',
+      title: 'Chapter 1\nThe Basics',
+      subtitle: 'Learning Python, REST APIs, JSON data, and fundamental data structures.',
       imageSrc: '/books-covers/UI 04/Frame 2147239727test-img-2.png',
       href: '#projects'
     },
@@ -16,8 +16,8 @@ export default function CompanyGuide() {
       id: 'chapter-2',
       num: 'Chapter 2',
       roman: 'Chapter II',
-      title: 'Chapter 2\nHow To Build',
-      subtitle: 'Deep learning models, computer vision systems, and neural network architectures.',
+      title: 'Chapter 2\nAutomation & Bots',
+      subtitle: 'Building n8n workflows, webhook triggers, background services & Telegram bots.',
       imageSrc: '/books-covers/UI 04/Frame 2147239728.png',
       href: '#projects'
     },
@@ -25,8 +25,8 @@ export default function CompanyGuide() {
       id: 'chapter-3',
       num: 'Chapter 3',
       roman: 'Chapter III',
-      title: 'Chapter 3\nHow To Sell',
-      subtitle: 'Deploying model endpoints, RAG pipelines, fine-tuning LLMs & agentic workflows.',
+      title: 'Chapter 3\nLocal AI & Models',
+      subtitle: 'Running local LLMs with Ollama/LM Studio, fine-tuning adapters & prompt crafting.',
       imageSrc: '/books-covers/UI 04/Frame 2147239727test-img.png',
       href: '#projects'
     },
@@ -34,8 +34,8 @@ export default function CompanyGuide() {
       id: 'chapter-4',
       num: 'Chapter 4',
       roman: 'Chapter IV',
-      title: 'Chapter 4\nHow To Scale',
-      subtitle: 'GPU infrastructure, CUDA C++ optimization, and distributed training.',
+      title: 'Chapter 4\nKnowledge Vault',
+      subtitle: 'Organizing my learning journey, Notion databases, and Obsidian Markdown notes.',
       imageSrc: '/books-covers/UI 04/Frame 2147239727.png',
       href: '#projects'
     }
@@ -48,22 +48,22 @@ export default function CompanyGuide() {
         {/* Section Heading */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <span className="text-xs font-mono uppercase tracking-wider text-[#202020]/50 block mb-2 font-mono-retro">STUDENT PLAYBOOK</span>
+            <span className="text-xs font-mono uppercase tracking-wider text-[#202020]/50 block mb-2 font-mono-retro">LEARNING JOURNEY</span>
             <h2 className="text-3xl md:text-5xl font-normal leading-tight text-[#202020]">
-              Learn & Build AI Systems
+              My Learning Playbook
             </h2>
             <p className="mt-3 text-base text-[#202020]/60 max-w-[540px]">
-              Explore the four core chapters of my machine learning journey and technical projects.
+              Four chapters capturing how I explore tech, build projects, and organize my knowledge.
             </p>
           </div>
 
           <a href="#contact" className="cta-btn inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-medium shrink-0">
-            <span>Explore Curriculum</span>
+            <span>See What's Next</span>
             <ArrowRight size={16} />
           </a>
         </div>
 
-        {/* 4 Book Cards Grid matching exact original structure */}
+        {/* 4 Book Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {chapters.map((chap) => (
             <a

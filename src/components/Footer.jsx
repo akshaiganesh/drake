@@ -29,7 +29,7 @@ export default function Footer() {
 
       <div className="w-full max-w-[1280px] mx-auto px-5 md:px-8 relative z-10 flex flex-col items-center">
 
-        {/* Interactive Holographic Card (Bottom Animation) */}
+        {/* Interactive Holographic Card */}
         <motion.div
           onMouseMove={handleMouseMove}
           onMouseLeave={() => setMousePos({ x: 0.5, y: 0.5 })}
@@ -38,7 +38,7 @@ export default function Footer() {
           }}
           className="w-full rounded-3xl border border-[#202020]/10 p-8 md:p-14 text-center flex flex-col items-center justify-center mb-16 shadow-xl relative overflow-hidden transition-transform duration-200 ease-out bg-[#F5F5F2]"
         >
-          {/* Holographic background overlay image */}
+          {/* Holographic overlay */}
           <div
             className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-multiply pointer-events-none transition-opacity duration-300 group-hover:opacity-50"
             style={{ backgroundImage: "url('/footer/Holo-bg-card.png')" }}
@@ -55,15 +55,15 @@ export default function Footer() {
           <div className="relative z-10 flex flex-col items-center max-w-[720px]">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#202020]/5 border border-[#202020]/10 text-[#202020] font-mono text-xs mb-4">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Let's Build Intelligent Systems Together</span>
+              <span>17y/o Tech Explorer & Builder</span>
             </div>
 
             <h2 className="text-3xl md:text-5xl font-normal text-[#202020] leading-tight tracking-tight">
-              Open for AI/ML Internships & Collaborations
+              Let’s Talk Tech, Automation & AI
             </h2>
 
-            <p className="mt-4 text-[#202020]/70 max-w-[540px] text-sm md:text-base leading-relaxed font-normal">
-              Always eager to contribute to cutting-edge machine learning research, open-source projects, and high-impact AI infrastructure.
+            <p className="mt-4 text-[#202020]/70 max-w-[560px] text-sm md:text-base leading-relaxed font-normal">
+              Always excited to share ideas, test new developer tools, collaborate on side projects, or talk about n8n workflows, Python scripts, and local LLMs.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
@@ -72,7 +72,7 @@ export default function Footer() {
                 className="cta-btn inline-flex items-center gap-2.5 h-[48px] px-8 rounded-xl font-medium text-sm md:text-base shadow-md transition-all text-[#FBFBF8]"
               >
                 <Mail className="w-4 h-4 text-[#FBFBF8]" />
-                <span>Get In Touch</span>
+                <span>Say Hello</span>
               </a>
 
               <a
@@ -89,49 +89,48 @@ export default function Footer() {
           </div>
         </motion.div>
 
-        {/* Footer Navigation Links Grid */}
+        {/* Footer Links */}
         <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-[#202020]/10 pt-12 pb-8">
           <div>
             <span className="text-xs font-mono uppercase tracking-wider text-[#202020]/50 block mb-4">Portfolio</span>
             <ul className="space-y-2 text-xs md:text-sm text-[#202020]/75 font-mono">
-              <li><a href="#projects" className="hover:text-black transition-colors">01 / Projects</a></li>
-              <li><a href="#curriculum" className="hover:text-black transition-colors">02 / Chapters</a></li>
-              <li><a href="#stack" className="hover:text-black transition-colors">03 / Tech Stack</a></li>
-              <li><a href="#contact" className="hover:text-black transition-colors">04 / Connect</a></li>
+              <li><a href="#projects" className="hover:text-black transition-colors">01 / Projects & Bots</a></li>
+              <li><a href="#curriculum" className="hover:text-black transition-colors">02 / Learning Chapters</a></li>
+              <li><a href="#contact" className="hover:text-black transition-colors">03 / Connect</a></li>
             </ul>
           </div>
 
           <div>
-            <span className="text-xs font-mono uppercase tracking-wider text-[#202020]/50 block mb-4">Focus Areas</span>
+            <span className="text-xs font-mono uppercase tracking-wider text-[#202020]/50 block mb-4">Interests</span>
             <ul className="space-y-2 text-xs md:text-sm text-[#202020]/75 font-mono">
-              <li>Deep Learning</li>
-              <li>Large Language Models</li>
-              <li>Computer Vision</li>
-              <li>CUDA & Edge AI</li>
+              <li>AI & Machine Learning</li>
+              <li>Local Models (Ollama)</li>
+              <li>n8n & Python Automation</li>
+              <li>AI Agents & Bots</li>
             </ul>
           </div>
 
           <div>
-            <span className="text-xs font-mono uppercase tracking-wider text-[#202020]/50 block mb-4">Frameworks</span>
+            <span className="text-xs font-mono uppercase tracking-wider text-[#202020]/50 block mb-4">Toolbox</span>
             <ul className="space-y-2 text-xs md:text-sm text-[#202020]/75 font-mono">
-              <li>PyTorch & CUDA</li>
-              <li>HuggingFace Transformers</li>
-              <li>OpenCV & YOLOv8</li>
-              <li>TensorRT & Docker</li>
+              <li>Python & REST APIs</li>
+              <li>n8n & Webhooks</li>
+              <li>Notion & Obsidian</li>
+              <li>Developer Tools</li>
             </ul>
           </div>
 
           <div>
-            <span className="text-xs font-mono uppercase tracking-wider text-[#202020]/50 block mb-4">Status</span>
+            <span className="text-xs font-mono uppercase tracking-wider text-[#202020]/50 block mb-4">Mindset</span>
             <p className="text-xs text-[#202020]/60 leading-relaxed font-mono">
-              Student developer learning every day & building real-world AI software.
+              Take an idea ➔ build it ➔ see what breaks ➔ learn & iterate.
             </p>
           </div>
         </div>
 
-        {/* Bottom Copyright & Credit */}
+        {/* Bottom Copyright */}
         <div className="w-full flex flex-col md:flex-row items-center justify-between border-t border-[#202020]/10 pt-8 text-xs text-[#202020]/40 font-mono gap-3">
-          <p>© 2026 AI/ML Student Portfolio. All rights reserved.</p>
+          <p>© 2026 Personal Portfolio. 12th Grade Student & Builder.</p>
           <p className="flex items-center gap-1">
             Built with <Heart className="w-3.5 h-3.5 text-[#202020] fill-[#202020]" /> React & Vite
           </p>
