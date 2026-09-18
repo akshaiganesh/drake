@@ -13,24 +13,24 @@ export default function Hero() {
     },
     {
       id: 2,
-      tag: 'Local AI & LoRA',
-      action: 'Running Llama-3 8B locally via Ollama & experimenting with fine-tuning',
-      time: '5m ago',
-      color: 'bg-blue-50 text-blue-700 border-blue-200'
+      tag: 'Agent Experiment',
+      action: 'Quota ran out on Agent A ➔ installed CLI Agent B ➔ benchmarked context window 😂',
+      time: '3m ago',
+      color: 'bg-purple-50 text-purple-700 border-purple-200'
     },
     {
       id: 3,
-      tag: 'Systemd Service',
-      action: 'Deployed Instagram DM auto-reply bot as systemd daemon on Linux',
-      time: '18m ago',
-      color: 'bg-emerald-50 text-emerald-700 border-emerald-200'
+      tag: 'Local AI & LoRA',
+      action: 'Running Llama-3 8B locally via Ollama & experimenting with fine-tuning',
+      time: '12m ago',
+      color: 'bg-blue-50 text-blue-700 border-blue-200'
     },
     {
       id: 4,
-      tag: 'Learning Loop',
-      action: 'Discovered PyTorch CUDA memory leak ➔ debugged ➔ fixed script',
-      time: '1h ago',
-      color: 'bg-amber-50 text-amber-700 border-amber-200'
+      tag: 'Systemd Service',
+      action: 'Deployed Instagram DM auto-reply bot as systemd daemon on Linux',
+      time: '25m ago',
+      color: 'bg-emerald-50 text-emerald-700 border-emerald-200'
     }
   ];
 
@@ -73,7 +73,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-5 max-w-[580px] text-left text-[15px] md:text-[17px] font-normal leading-[155%] text-[#202020]/80 font-sans backdrop-blur-[2px]">
-            12th-grade student going deep into AI/ML, local LLMs, fine-tuning, Python automation, and background services. Currently obsessed with Hermes, n8n, and understanding what actually happens under the hood.
+            12th-grade student obsessed with AI/ML, coding agents, n8n automation, local LLMs, and Python services. Currently driving Hermes, jumping quotas, and figuring out what happens under the hood.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -89,7 +89,7 @@ export default function Hero() {
               className="inline-flex items-center justify-center gap-2 h-[44px] px-6 rounded-[10px] text-[15px] font-medium text-[#202020] bg-[#F5F5F2]/90 hover:bg-white border border-[#202020]/15 backdrop-blur-md transition-all shadow-xs"
             >
               <Sparkles className="w-4 h-4 text-[#202020]" />
-              <span>Hermes — My Daily Driver</span>
+              <span>Coding Agent Obsession</span>
             </a>
           </div>
 
@@ -100,17 +100,17 @@ export default function Hero() {
               <span className="text-xs text-[#202020]/60 font-mono font-medium">Daily Dev Companion</span>
             </div>
             <div>
-              <span className="block font-mono text-base md:text-lg font-bold text-[#202020]">Python & n8n</span>
-              <span className="text-xs text-[#202020]/60 font-mono font-medium">Bots & Workflows</span>
+              <span className="block font-mono text-base md:text-lg font-bold text-[#202020]">Quota Jumper</span>
+              <span className="text-xs text-[#202020]/60 font-mono font-medium">Agent Tester 😂</span>
             </div>
             <div>
-              <span className="block font-mono text-base md:text-lg font-bold text-[#202020]">Local AI & LoRA</span>
-              <span className="text-xs text-[#202020]/60 font-mono font-medium">Under the Hood</span>
+              <span className="block font-mono text-base md:text-lg font-bold text-[#202020]">Python & n8n</span>
+              <span className="text-xs text-[#202020]/60 font-mono font-medium">Bots & Workflows</span>
             </div>
           </div>
         </motion.div>
 
-        {/* Hero Right Notification Feed Card */}
+        {/* Hero Right Stream Card */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -152,7 +152,7 @@ export default function Hero() {
             </div>
 
             <div className="pt-2 border-t border-[#202020]/10 flex items-center justify-between text-[11px] text-[#202020]/50 font-mono">
-              <span>Loop: Build ➔ Break ➔ Fix ➔ Learn</span>
+              <span>Quota Out ➔ Try New Agent ➔ Repeat</span>
               <span className="text-[#202020] flex items-center gap-1 font-semibold">
                 Daily <ArrowDownRight className="w-3 h-3" />
               </span>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Terminal, Play, Cpu, Brain, Sparkles, ArrowUpRight, Workflow, Bot, FileText, Zap, Code2, Server } from 'lucide-react';
+import { Terminal, Play, Cpu, Brain, Sparkles, ArrowUpRight, Workflow, Bot, FileText, Zap, Code2, Server, Repeat } from 'lucide-react';
 
 function GithubIcon({ className = "w-4 h-4" }) {
   return (
@@ -106,7 +106,7 @@ export default function FeatureCards() {
   return (
     <div id="hermes" className="w-full bg-[#FBFBF8]">
       
-      {/* 🌟 HERMES DAILY DRIVER SPOTLIGHT SECTION 🌟 */}
+      {/* 🌟 HERMES & CODING AGENT OBSESSION SPOTLIGHT 🌟 */}
       <section className="w-full py-16 md:py-24 border-b border-[#202020]/10">
         <div className="w-full max-w-[1280px] mx-auto px-5 md:px-8">
           <div className="rounded-3xl bg-[#F5F5F2] border border-[#202020]/15 p-8 md:p-14 shadow-lg relative overflow-hidden">
@@ -114,10 +114,10 @@ export default function FeatureCards() {
               <Sparkles className="w-48 h-48 text-[#202020]" />
             </div>
 
-            <div className="max-w-[760px]">
+            <div className="max-w-[800px]">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#202020]/5 border border-[#202020]/15 text-[#202020] font-mono text-xs mb-4">
                 <Zap className="w-3.5 h-3.5" />
-                <span>Daily Driver</span>
+                <span>Daily Driver & Agent Obsession</span>
               </div>
 
               <h2 className="text-3xl md:text-5xl font-normal text-[#202020] tracking-tight">
@@ -125,25 +125,33 @@ export default function FeatureCards() {
               </h2>
 
               <p className="mt-4 text-[#202020]/80 text-base md:text-lg leading-relaxed font-normal">
-                Hermes deserves its own section rather than being buried inside a tools list. It is one of the main AI coding agent & development tools I use in my everyday workflow.
+                I’m constantly experimenting with different AI coding agents and developer tools. Part of this is because free tier usage quotas hit their limit 😂, but it turned into something I genuinely enjoy.
               </p>
+
+              {/* Quota Jumper Loop Banner */}
+              <div className="mt-6 p-4 rounded-2xl bg-white border border-[#202020]/10 font-mono text-xs md:text-sm text-[#202020] flex items-center gap-3 shadow-xs">
+                <Repeat className="w-5 h-5 text-indigo-600 shrink-0 animate-spin" />
+                <span>
+                  <strong>The Quota Loop:</strong> One quota runs out ➔ install another agent ➔ test it ➔ compare context windows ➔ accidentally discover another tool ➔ repeat.
+                </span>
+              </div>
 
               <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm font-mono text-[#202020]/80">
                 <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-[#202020]/10">
                   <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                  <span>Building projects from scratch</span>
+                  <span>Hermes (Primary Daily Driver)</span>
                 </div>
                 <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-[#202020]/10">
                   <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                  <span>Debugging broken code & APIs</span>
+                  <span>Testing Agentic IDEs & CLI Tools</span>
                 </div>
                 <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-[#202020]/10">
                   <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                  <span>Setting up systemd background services</span>
+                  <span>Comparing LLM Context Windows</span>
                 </div>
                 <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-[#202020]/10">
                   <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                  <span>Exploring new tools & frameworks</span>
+                  <span>Local AI Tools (Ollama & LM Studio)</span>
                 </div>
               </div>
             </div>
