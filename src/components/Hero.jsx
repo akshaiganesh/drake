@@ -44,11 +44,11 @@ export default function Hero() {
           loop
           muted
           playsInline
-          poster="/hero/cofounder-2-hero-poster.webp"
+          poster={`${import.meta.env.BASE_URL}hero/cofounder-2-hero-poster.webp`}
           className="w-full h-full object-cover object-center"
         >
-          <source src="/hero/cofounder-2-hero.webm" type="video/webm" />
-          <source src="/hero/cofounder-2-hero.mp4" type="video/mp4" />
+          <source src={`${import.meta.env.BASE_URL}hero/cofounder-2-hero.webm`} type="video/webm" />
+          <source src={`${import.meta.env.BASE_URL}hero/cofounder-2-hero.mp4`} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-[#FBFBF8] via-[#FBFBF8]/20 to-[#FBFBF8]/40" />
       </div>

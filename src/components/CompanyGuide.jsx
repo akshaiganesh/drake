@@ -9,7 +9,7 @@ export default function CompanyGuide() {
       roman: 'Chapter I',
       title: 'Chapter 1\nThe Learning Loop',
       subtitle: 'Idea ➔ Research ➔ Build ➔ Break ➔ Debug ➔ Understand ➔ Fix.',
-      imageSrc: '/books-covers/UI 04/Frame 2147239727test-img-2.png',
+      imageSrc: `${import.meta.env.BASE_URL}books-covers/UI 04/Frame 2147239727test-img-2.png`,
       href: '#projects'
     },
     {
@@ -18,7 +18,7 @@ export default function CompanyGuide() {
       roman: 'Chapter II',
       title: 'Chapter 2\nBots & Systemd',
       subtitle: 'Building IG auto-reply bots, n8n automation & Linux background services.',
-      imageSrc: '/books-covers/UI 04/Frame 2147239728.png',
+      imageSrc: `${import.meta.env.BASE_URL}books-covers/UI 04/Frame 2147239728.png`,
       href: '#projects'
     },
     {
@@ -27,7 +27,7 @@ export default function CompanyGuide() {
       roman: 'Chapter III',
       title: 'Chapter 3\nDeep Into AI/ML',
       subtitle: 'Moving beyond prompts: PyTorch, LoRA fine-tuning, Transformers & CUDA.',
-      imageSrc: '/books-covers/UI 04/Frame 2147239727test-img.png',
+      imageSrc: `${import.meta.env.BASE_URL}books-covers/UI 04/Frame 2147239727test-img.png`,
       href: '#projects'
     },
     {
@@ -36,7 +36,7 @@ export default function CompanyGuide() {
       roman: 'Chapter IV',
       title: 'Chapter 4\nTech + Creativity',
       subtitle: 'Combining coding with web design, visual media, video editing & aesthetics.',
-      imageSrc: '/books-covers/UI 04/Frame 2147239727.png',
+      imageSrc: `${import.meta.env.BASE_URL}books-covers/UI 04/Frame 2147239727.png`,
       href: '#projects'
     }
   ];

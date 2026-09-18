@@ -112,7 +112,7 @@ export default function FeatureCards() {
           <div
             className="rounded-3xl border border-white/10 p-8 md:p-14 shadow-2xl relative overflow-hidden min-h-[400px] flex items-end"
             style={{
-              backgroundImage: 'url(/hermes-bg.jpg)',
+              backgroundImage: `url(${import.meta.env.BASE_URL}hermes-bg.jpg)`,
               backgroundSize: 'cover',
               backgroundPosition: 'center top',
             }}
