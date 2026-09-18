@@ -43,6 +43,8 @@ export default function Header() {
             <div className="w-[1px] h-3 bg-[#202020]/20 my-auto" />
             <a href="#hermes" className="text-[15px] font-[410] text-[#202020] hover:text-black px-2 py-1 transition-colors">Hermes & Stack</a>
             <div className="w-[1px] h-3 bg-[#202020]/20 my-auto" />
+            <a href="#laptop-server" className="text-[15px] font-[410] text-[#202020] hover:text-black px-2 py-1 transition-colors">Laptop Server</a>
+            <div className="w-[1px] h-3 bg-[#202020]/20 my-auto" />
             <a href="#curriculum" className="text-[15px] font-[410] text-[#202020] hover:text-black px-2 py-1 transition-colors">Chapters</a>
             <div className="w-[1px] h-3 bg-[#202020]/20 my-auto" />
             <a href="#contact" className="text-[15px] font-[410] text-[#202020] hover:text-black px-2 py-1 transition-colors">Connect</a>
@@ -87,6 +89,7 @@ export default function Header() {
           <div className="grid grid-cols-2 gap-2">
             <a href="#projects" onClick={() => setMobileMenuOpen(false)} className="p-3 bg-[#F5F5F2] rounded-lg text-sm font-medium">What I Build</a>
             <a href="#hermes" onClick={() => setMobileMenuOpen(false)} className="p-3 bg-[#F5F5F2] rounded-lg text-sm font-medium">Hermes & Stack</a>
+            <a href="#laptop-server" onClick={() => setMobileMenuOpen(false)} className="p-3 bg-[#F5F5F2] rounded-lg text-sm font-medium">Laptop Server</a>
             <a href="#curriculum" onClick={() => setMobileMenuOpen(false)} className="p-3 bg-[#F5F5F2] rounded-lg text-sm font-medium">Chapters</a>
             <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="p-3 bg-[#F5F5F2] rounded-lg text-sm font-medium">Connect</a>
           </div>

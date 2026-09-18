@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import FeatureCards from './components/FeatureCards';
+import LaptopServer from './components/LaptopServer';
 import CompanyGuide from './components/CompanyGuide';
 import Footer from './components/Footer';
 
@@ -15,6 +16,7 @@ export default function App() {
       <main className="flex-1">
         <Hero />
         <FeatureCards />
+        <LaptopServer />
         <CompanyGuide />
       </main>
 
