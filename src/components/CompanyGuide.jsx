@@ -7,8 +7,8 @@ export default function CompanyGuide() {
       id: 'chapter-1',
       num: 'Chapter 1',
       roman: 'Chapter I',
-      title: 'Chapter 1\nThe Basics',
-      subtitle: 'Learning Python, REST APIs, JSON data, and fundamental data structures.',
+      title: 'Chapter 1\nThe Learning Loop',
+      subtitle: 'Idea ➔ Research ➔ Build ➔ Break ➔ Debug ➔ Understand ➔ Fix.',
       imageSrc: '/books-covers/UI 04/Frame 2147239727test-img-2.png',
       href: '#projects'
     },
@@ -16,8 +16,8 @@ export default function CompanyGuide() {
       id: 'chapter-2',
       num: 'Chapter 2',
       roman: 'Chapter II',
-      title: 'Chapter 2\nAutomation & Bots',
-      subtitle: 'Building n8n workflows, webhook triggers, background services & Telegram bots.',
+      title: 'Chapter 2\nBots & Systemd',
+      subtitle: 'Building IG auto-reply bots, n8n automation & Linux background services.',
       imageSrc: '/books-covers/UI 04/Frame 2147239728.png',
       href: '#projects'
     },
@@ -25,8 +25,8 @@ export default function CompanyGuide() {
       id: 'chapter-3',
       num: 'Chapter 3',
       roman: 'Chapter III',
-      title: 'Chapter 3\nLocal AI & Models',
-      subtitle: 'Running local LLMs with Ollama/LM Studio, fine-tuning adapters & prompt crafting.',
+      title: 'Chapter 3\nDeep Into AI/ML',
+      subtitle: 'Moving beyond prompts: PyTorch, LoRA fine-tuning, Transformers & CUDA.',
       imageSrc: '/books-covers/UI 04/Frame 2147239727test-img.png',
       href: '#projects'
     },
@@ -34,8 +34,8 @@ export default function CompanyGuide() {
       id: 'chapter-4',
       num: 'Chapter 4',
       roman: 'Chapter IV',
-      title: 'Chapter 4\nKnowledge Vault',
-      subtitle: 'Organizing my learning journey, Notion databases, and Obsidian Markdown notes.',
+      title: 'Chapter 4\nTech + Creativity',
+      subtitle: 'Combining coding with web design, visual media, video editing & aesthetics.',
       imageSrc: '/books-covers/UI 04/Frame 2147239727.png',
       href: '#projects'
     }
@@ -48,17 +48,17 @@ export default function CompanyGuide() {
         {/* Section Heading */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <span className="text-xs font-mono uppercase tracking-wider text-[#202020]/50 block mb-2 font-mono-retro">LEARNING JOURNEY</span>
+            <span className="text-xs font-mono uppercase tracking-wider text-[#202020]/50 block mb-2 font-mono-retro font-semibold">MY JOURNEY & PLAYBOOK</span>
             <h2 className="text-3xl md:text-5xl font-normal leading-tight text-[#202020]">
-              My Learning Playbook
+              How I Learn & Build
             </h2>
             <p className="mt-3 text-base text-[#202020]/60 max-w-[540px]">
-              Four chapters capturing how I explore tech, build projects, and organize my knowledge.
+              Four chapters capturing my approach to tech, hands-on experimentation, AI/ML exploration, and creative projects.
             </p>
           </div>
 
           <a href="#contact" className="cta-btn inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-medium shrink-0">
-            <span>See What's Next</span>
+            <span>Connect & Chat</span>
             <ArrowRight size={16} />
           </a>
         </div>
@@ -95,7 +95,7 @@ export default function CompanyGuide() {
               </div>
 
               <div className="mt-6 flex items-center justify-between text-xs font-mono font-medium text-[#202020] group-hover:translate-x-1 transition-transform">
-                <span>View Chapter</span>
+                <span>Explore Chapter</span>
                 <ArrowRight size={14} />
               </div>
             </a>

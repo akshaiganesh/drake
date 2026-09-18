@@ -1,43 +1,43 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Terminal, Cpu, ArrowDownRight, BookOpen } from 'lucide-react';
+import { Terminal, Cpu, ArrowDownRight, Sparkles } from 'lucide-react';
 
 export default function Hero() {
   const heroNotifications = [
     {
       id: 1,
-      tag: 'Local LLMs',
-      action: 'Running Llama-3 8B locally via Ollama & LM Studio',
+      tag: 'Hermes Agent',
+      action: 'Refactoring Python background service & debugging n8n webhook',
       time: 'Just now',
-      color: 'bg-blue-50 text-blue-700 border-blue-200'
+      color: 'bg-indigo-50 text-indigo-700 border-indigo-200'
     },
     {
       id: 2,
-      tag: 'n8n Automation',
-      action: 'Active Telegram bot & Webhook automation pipeline',
-      time: '4m ago',
-      color: 'bg-amber-50 text-amber-700 border-amber-200'
+      tag: 'Local AI & LoRA',
+      action: 'Running Llama-3 8B locally via Ollama & experimenting with fine-tuning',
+      time: '5m ago',
+      color: 'bg-blue-50 text-blue-700 border-blue-200'
     },
     {
       id: 3,
-      tag: 'Python Service',
-      action: 'Custom API scraper & Notion knowledge base sync tool',
-      time: '15m ago',
+      tag: 'Systemd Service',
+      action: 'Deployed Instagram DM auto-reply bot as systemd daemon on Linux',
+      time: '18m ago',
       color: 'bg-emerald-50 text-emerald-700 border-emerald-200'
     },
     {
       id: 4,
-      tag: 'Obsidian Vault',
-      action: 'Organized 20+ study notes on Fine-Tuning & AI Agents',
+      tag: 'Learning Loop',
+      action: 'Discovered PyTorch CUDA memory leak ➔ debugged ➔ fixed script',
       time: '1h ago',
-      color: 'bg-purple-50 text-purple-700 border-purple-200'
+      color: 'bg-amber-50 text-amber-700 border-amber-200'
     }
   ];
 
   return (
     <div id="site-hero" className="relative w-full min-h-[640px] md:min-h-[720px] bg-[#FBFBF8] pb-16 pt-28 md:pt-36 flex items-center justify-center overflow-hidden border-b border-[#202020]/10">
 
-      {/* Background Main Video Artwork - High Visibility */}
+      {/* Main Video Artwork */}
       <div className="absolute inset-0 z-0 opacity-85 pointer-events-none">
         <video
           autoPlay
@@ -65,15 +65,15 @@ export default function Hero() {
           {/* Status Badge */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FBFBF8]/90 border border-[#202020]/15 text-[#202020] text-xs font-mono mb-6 shadow-xs backdrop-blur-md">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>17 y/o 12th-Grade Student & Builder</span>
+            <span>17 y/o Student • 12th Grade Builder</span>
           </div>
 
           <h1 className="m-0 font-normal text-[34px] sm:text-[44px] lg:text-[54px] leading-[112%] tracking-tight text-[#202020] text-left drop-shadow-xs">
-            17-year-old building <span className="font-semibold underline decoration-2 decoration-[#202020]/30 underline-offset-4">AI models, automation bots</span> & local LLM tools.
+            I’m 17. I <span className="font-semibold underline decoration-2 decoration-[#202020]/30 underline-offset-4">build things, break them, fix them</span>, and learn as I go.
           </h1>
 
           <p className="mt-5 max-w-[580px] text-left text-[15px] md:text-[17px] font-normal leading-[155%] text-[#202020]/80 font-sans backdrop-blur-[2px]">
-            12th grader passionate about AI, machine learning, local LLMs, n8n automation pipelines, Python, and building useful tools. Learning by taking an idea, building it, seeing what breaks, and improving it every day.
+            12th-grade student going deep into AI/ML, local LLMs, fine-tuning, Python automation, and background services. Currently obsessed with Hermes, n8n, and understanding what actually happens under the hood.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -82,35 +82,35 @@ export default function Hero() {
               className="cta-btn inline-flex items-center justify-center gap-2 h-[44px] px-6 rounded-[10px] text-[15px] font-medium shadow-md transition-all"
             >
               <Cpu className="w-4 h-4 text-[#FBFBF8]" />
-              <span>See What I’m Building</span>
+              <span>See What I Build</span>
             </a>
             <a
-              href="#curriculum"
+              href="#hermes"
               className="inline-flex items-center justify-center gap-2 h-[44px] px-6 rounded-[10px] text-[15px] font-medium text-[#202020] bg-[#F5F5F2]/90 hover:bg-white border border-[#202020]/15 backdrop-blur-md transition-all shadow-xs"
             >
-              <BookOpen className="w-4 h-4 text-[#202020]" />
-              <span>Explore My Journey</span>
+              <Sparkles className="w-4 h-4 text-[#202020]" />
+              <span>Hermes — My Daily Driver</span>
             </a>
           </div>
 
           {/* Persona Stack Highlights */}
-          <div className="mt-10 pt-6 border-t border-[#202020]/15 grid grid-cols-3 gap-4 max-w-[500px]">
+          <div className="mt-10 pt-6 border-t border-[#202020]/15 grid grid-cols-3 gap-4 max-w-[520px]">
             <div>
-              <span className="block font-mono text-lg md:text-xl font-bold text-[#202020]">Python & n8n</span>
-              <span className="text-xs text-[#202020]/60 font-mono font-medium">Automation Bots</span>
+              <span className="block font-mono text-base md:text-lg font-bold text-[#202020]">Hermes</span>
+              <span className="text-xs text-[#202020]/60 font-mono font-medium">Daily Dev Companion</span>
             </div>
             <div>
-              <span className="block font-mono text-lg md:text-xl font-bold text-[#202020]">Local AI</span>
-              <span className="text-xs text-[#202020]/60 font-mono font-medium">Ollama & Fine-Tuning</span>
+              <span className="block font-mono text-base md:text-lg font-bold text-[#202020]">Python & n8n</span>
+              <span className="text-xs text-[#202020]/60 font-mono font-medium">Bots & Workflows</span>
             </div>
             <div>
-              <span className="block font-mono text-lg md:text-xl font-bold text-[#202020]">Notion & Obsidian</span>
-              <span className="text-xs text-[#202020]/60 font-mono font-medium">Second Brain</span>
+              <span className="block font-mono text-base md:text-lg font-bold text-[#202020]">Local AI & LoRA</span>
+              <span className="text-xs text-[#202020]/60 font-mono font-medium">Under the Hood</span>
             </div>
           </div>
         </motion.div>
 
-        {/* Hero Right Stream Card */}
+        {/* Hero Right Notification Feed Card */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -128,7 +128,7 @@ export default function Hero() {
               </div>
               <span className="flex items-center gap-1.5 text-[11px] font-mono text-emerald-700">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-                Active Learning
+                Active Experiments
               </span>
             </div>
 
@@ -152,7 +152,7 @@ export default function Hero() {
             </div>
 
             <div className="pt-2 border-t border-[#202020]/10 flex items-center justify-between text-[11px] text-[#202020]/50 font-mono">
-              <span>Mindset: Build, Break & Learn</span>
+              <span>Loop: Build ➔ Break ➔ Fix ➔ Learn</span>
               <span className="text-[#202020] flex items-center gap-1 font-semibold">
                 Daily <ArrowDownRight className="w-3 h-3" />
               </span>

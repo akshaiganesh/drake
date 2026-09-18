@@ -52,18 +52,18 @@ export default function Footer() {
             }}
           />
 
-          <div className="relative z-10 flex flex-col items-center max-w-[720px]">
+          <div className="relative z-10 flex flex-col items-center max-w-[760px]">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#202020]/5 border border-[#202020]/10 text-[#202020] font-mono text-xs mb-4">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>17y/o Tech Explorer & Builder</span>
+              <span>Living Snapshot of My Tech Journey</span>
             </div>
 
             <h2 className="text-3xl md:text-5xl font-normal text-[#202020] leading-tight tracking-tight">
-              Let’s Talk Tech, Automation & AI
+              Keep building. Keep breaking things. Keep learning.
             </h2>
 
-            <p className="mt-4 text-[#202020]/70 max-w-[560px] text-sm md:text-base leading-relaxed font-normal">
-              Always excited to share ideas, test new developer tools, collaborate on side projects, or talk about n8n workflows, Python scripts, and local LLMs.
+            <p className="mt-4 text-[#202020]/70 max-w-[580px] text-sm md:text-base leading-relaxed font-normal">
+              I’m 17, curious as hell, and probably discovering another weird piece of technology tomorrow. Want to chat about Hermes, local LLMs, n8n workflows, or collaborate on a side project?
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
@@ -72,7 +72,7 @@ export default function Footer() {
                 className="cta-btn inline-flex items-center gap-2.5 h-[48px] px-8 rounded-xl font-medium text-sm md:text-base shadow-md transition-all text-[#FBFBF8]"
               >
                 <Mail className="w-4 h-4 text-[#FBFBF8]" />
-                <span>Say Hello</span>
+                <span>Let's Connect</span>
               </a>
 
               <a
@@ -92,45 +92,46 @@ export default function Footer() {
         {/* Footer Links */}
         <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-[#202020]/10 pt-12 pb-8">
           <div>
-            <span className="text-xs font-mono uppercase tracking-wider text-[#202020]/50 block mb-4">Portfolio</span>
+            <span className="text-xs font-mono uppercase tracking-wider text-[#202020]/50 block mb-4">Navigation</span>
             <ul className="space-y-2 text-xs md:text-sm text-[#202020]/75 font-mono">
-              <li><a href="#projects" className="hover:text-black transition-colors">01 / Projects & Bots</a></li>
-              <li><a href="#curriculum" className="hover:text-black transition-colors">02 / Learning Chapters</a></li>
-              <li><a href="#contact" className="hover:text-black transition-colors">03 / Connect</a></li>
+              <li><a href="#projects" className="hover:text-black transition-colors">01 / What I Build</a></li>
+              <li><a href="#hermes" className="hover:text-black transition-colors">02 / Hermes Daily Driver</a></li>
+              <li><a href="#curriculum" className="hover:text-black transition-colors">03 / Chapters</a></li>
+              <li><a href="#contact" className="hover:text-black transition-colors">04 / Connect</a></li>
             </ul>
           </div>
 
           <div>
             <span className="text-xs font-mono uppercase tracking-wider text-[#202020]/50 block mb-4">Interests</span>
             <ul className="space-y-2 text-xs md:text-sm text-[#202020]/75 font-mono">
-              <li>AI & Machine Learning</li>
-              <li>Local Models (Ollama)</li>
+              <li>AI / ML & Fine-Tuning</li>
+              <li>Local AI (Ollama & LM Studio)</li>
               <li>n8n & Python Automation</li>
-              <li>AI Agents & Bots</li>
+              <li>Systemd Daemons & Linux</li>
             </ul>
           </div>
 
           <div>
-            <span className="text-xs font-mono uppercase tracking-wider text-[#202020]/50 block mb-4">Toolbox</span>
+            <span className="text-xs font-mono uppercase tracking-wider text-[#202020]/50 block mb-4">Daily Stack</span>
             <ul className="space-y-2 text-xs md:text-sm text-[#202020]/75 font-mono">
-              <li>Python & REST APIs</li>
-              <li>n8n & Webhooks</li>
-              <li>Notion & Obsidian</li>
-              <li>Developer Tools</li>
+              <li>Hermes (Daily Driver)</li>
+              <li>Python, n8n, Git/GitHub</li>
+              <li>Linux, Terminal, systemd</li>
+              <li>Notion & Obsidian Vault</li>
             </ul>
           </div>
 
           <div>
-            <span className="text-xs font-mono uppercase tracking-wider text-[#202020]/50 block mb-4">Mindset</span>
+            <span className="text-xs font-mono uppercase tracking-wider text-[#202020]/50 block mb-4">Approach</span>
             <p className="text-xs text-[#202020]/60 leading-relaxed font-mono">
-              Take an idea ➔ build it ➔ see what breaks ➔ learn & iterate.
+              Idea ➔ Research ➔ Build ➔ Break ➔ Debug ➔ Understand ➔ Fix ➔ Learn.
             </p>
           </div>
         </div>
 
         {/* Bottom Copyright */}
         <div className="w-full flex flex-col md:flex-row items-center justify-between border-t border-[#202020]/10 pt-8 text-xs text-[#202020]/40 font-mono gap-3">
-          <p>© 2026 Personal Portfolio. 12th Grade Student & Builder.</p>
+          <p>© 2026 Personal Portfolio. 17-Year-Old Student & Builder.</p>
           <p className="flex items-center gap-1">
             Built with <Heart className="w-3.5 h-3.5 text-[#202020] fill-[#202020]" /> React & Vite
           </p>
