@@ -1,132 +1,108 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { BookOpen, Sparkles } from 'lucide-react';
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
 
 export default function CompanyGuide() {
-  const [activeBook, setActiveBook] = useState(null);
-
-  const books = [
+  const chapters = [
     {
-      id: 'chap-1',
-      chapter: 'I',
+      id: 'chapter-1',
       num: 'Chapter 1',
-      title: 'ML & Math Foundations',
-      subtitle: 'Linear Algebra, Probability, Calculus & Convex Optimization',
-      image: '/books-covers/UI 04/Frame 2147239727test-img-2.png',
-      topics: ['Matrix Decomposition (SVD)', 'Gradient Descent', 'Probabilistic Models']
+      roman: 'Chapter I',
+      title: 'Chapter 1\nHow To Start',
+      subtitle: 'Building AI/ML foundations, mathematics, and learning core frameworks.',
+      imageSrc: '/books-covers/UI 04/Frame 2147239727test-img-2.png',
+      href: '#projects'
     },
     {
-      id: 'chap-2',
-      chapter: 'II',
+      id: 'chapter-2',
       num: 'Chapter 2',
-      title: 'Deep Learning & Vision',
-      subtitle: 'Convolutional Nets, ResNets & Visual Transformers (ViT)',
-      image: '/books-covers/UI 04/Frame 2147239728.png',
-      topics: ['CNN Architectures', 'Object Detection (YOLO)', 'Backpropagation']
+      roman: 'Chapter II',
+      title: 'Chapter 2\nHow To Build',
+      subtitle: 'Deep learning models, computer vision systems, and neural network architectures.',
+      imageSrc: '/books-covers/UI 04/Frame 2147239728.png',
+      href: '#projects'
     },
     {
-      id: 'chap-3',
-      chapter: 'III',
+      id: 'chapter-3',
       num: 'Chapter 3',
-      title: 'Transformers & LLMs',
-      subtitle: 'Attention Mechanism, QLoRA Fine-tuning & RAG Pipelines',
-      image: '/books-covers/UI 04/Frame 2147239727test-img.png',
-      topics: ['Multi-Head Attention', 'FlashAttention', 'PEFT & QLoRA']
+      roman: 'Chapter III',
+      title: 'Chapter 3\nHow To Sell',
+      subtitle: 'Deploying model endpoints, RAG pipelines, fine-tuning LLMs & agentic workflows.',
+      imageSrc: '/books-covers/UI 04/Frame 2147239727test-img.png',
+      href: '#projects'
     },
     {
-      id: 'chap-4',
-      chapter: 'IV',
+      id: 'chapter-4',
       num: 'Chapter 4',
-      title: 'AI Systems & CUDA',
-      subtitle: 'TensorRT Acceleration, CUDA Kernels & Distributed GPU',
-      image: '/books-covers/UI 04/Frame 2147239727.png',
-      topics: ['CUDA C++ Programming', 'TensorRT Optimization', 'Distributed Data Parallel']
+      roman: 'Chapter IV',
+      title: 'Chapter 4\nHow To Scale',
+      subtitle: 'GPU infrastructure, CUDA C++ optimization, and distributed training.',
+      imageSrc: '/books-covers/UI 04/Frame 2147239727.png',
+      href: '#projects'
     }
   ];
 
   return (
-    <section id="curriculum" className="w-full bg-[#FBFBF8] py-24 border-b border-[#202020]/10 relative overflow-hidden">
-      
-      {/* Background Decor Artwork */}
-      <div className="absolute inset-0 pointer-events-none opacity-40 flex justify-center">
-        <img
-          src="/decor/behind the books.png"
-          alt="Behind the books decor"
-          className="h-full w-full max-w-[1400px] object-cover object-center"
-        />
-      </div>
+    <div id="curriculum" className="w-full bg-[#FBFBF8] py-24 border-b border-[#E8E7E6]">
+      <div className="w-full max-w-[1200px] mx-auto px-6">
 
-      <div className="w-full max-w-[1280px] mx-auto px-5 md:px-8 relative z-10">
-
-        {/* Section Header */}
-        <div className="flex flex-col items-center text-center max-w-[680px] mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#202020]/5 border border-[#202020]/10 text-[#202020] font-mono text-xs mb-3">
-            <BookOpen className="w-3.5 h-3.5" />
-            <span>AI Curriculum & Learning Chapters</span>
+        {/* Section Heading */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div>
+            <span className="text-xs font-mono uppercase tracking-wider text-[#202020]/50 block mb-2 font-mono-retro">STUDENT PLAYBOOK</span>
+            <h2 className="text-3xl md:text-5xl font-normal leading-tight text-[#202020]">
+              Learn & Build AI Systems
+            </h2>
+            <p className="mt-3 text-base text-[#202020]/60 max-w-[540px]">
+              Explore the four core chapters of my machine learning journey and technical projects.
+            </p>
           </div>
-          <h2 className="text-3xl md:text-5xl font-normal text-[#202020] tracking-tight">
-            Curriculum & Study Playbook
-          </h2>
-          <p className="mt-3 text-[#202020]/60 text-sm md:text-base">
-            Mastering Artificial Intelligence layer by layer — from foundational mathematics to high-performance CUDA engineering.
-          </p>
+
+          <a href="#contact" className="cta-btn inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-medium shrink-0">
+            <span>Explore Curriculum</span>
+            <ArrowRight size={16} />
+          </a>
         </div>
 
-        {/* 4 Interactive 3D Book Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {books.map((book) => (
-            <motion.div
-              key={book.id}
-              whileHover={{ y: -8, scale: 1.02 }}
-              onMouseEnter={() => setActiveBook(book.id)}
-              onMouseLeave={() => setActiveBook(null)}
-              className="rounded-2xl bg-[#F5F5F2] p-6 border border-[#202020]/10 flex flex-col justify-between group transition-all duration-300 shadow-md hover:shadow-xl relative overflow-hidden"
+        {/* 4 Book Cards Grid matching exact original structure */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {chapters.map((chap) => (
+            <a
+              key={chap.id}
+              href={chap.href}
+              className="p-6 rounded-2xl bg-[#F5F5F2] border border-black/5 hover:border-black/20 hover:bg-white transition-all flex flex-col justify-between min-h-[340px] group shadow-xs"
             >
               <div>
-                {/* Chapter Metadata Header */}
-                <div className="flex items-center justify-between font-mono text-xs text-[#202020]/50 mb-4 pb-2 border-b border-[#202020]/10">
-                  <span className="text-[#202020] font-semibold">{book.num}</span>
-                  <span>{book.chapter}</span>
+                <div className="flex items-center justify-between text-xs font-mono text-[#202020]/40 mb-3">
+                  <span>{chap.num}</span>
+                  <span>{chap.roman}</span>
                 </div>
 
-                {/* 3D Book Cover Image Container */}
-                <div className="w-full aspect-[4/5] mb-5 rounded-xl overflow-hidden bg-white border border-[#202020]/10 p-2 flex items-center justify-center relative group-hover:border-[#202020]/30 transition-colors shadow-md">
+                {/* Book Cover Image */}
+                <div className="w-full aspect-[4/5] mb-4 rounded-xl overflow-hidden bg-white border border-black/5 p-2 flex items-center justify-center shadow-xs">
                   <img
-                    src={book.image}
-                    alt={book.title}
-                    className="w-full h-full object-contain rounded-lg transform group-hover:scale-105 group-hover:rotate-1 transition-transform duration-500 drop-shadow-[0_8px_16px_rgba(0,0,0,0.15)]"
+                    src={chap.imageSrc}
+                    alt={chap.title}
+                    className="w-full h-full object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3 rounded-lg">
-                    <span className="text-[11px] font-mono text-white flex items-center gap-1">
-                      <Sparkles className="w-3 h-3 text-white" /> Tap to view topics
-                    </span>
-                  </div>
                 </div>
 
-                {/* Title & Subtitle */}
-                <h3 className="text-lg font-semibold text-[#202020] group-hover:text-black transition-colors leading-snug">
-                  {book.title}
+                <h3 className="text-lg font-semibold text-[#202020] group-hover:text-black transition-colors whitespace-pre-line leading-tight">
+                  {chap.title}
                 </h3>
-                <p className="text-xs text-[#202020]/60 mt-2 font-normal leading-relaxed">
-                  {book.subtitle}
+                <p className="text-xs text-[#202020]/60 mt-2 leading-relaxed">
+                  {chap.subtitle}
                 </p>
               </div>
 
-              {/* Topics Bullet List */}
-              <div className="mt-6 pt-4 border-t border-[#202020]/10 space-y-1.5">
-                {book.topics.map((topic, i) => (
-                  <div key={i} className="flex items-center gap-2 text-[11px] font-mono text-[#202020]/75">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#202020]" />
-                    <span>{topic}</span>
-                  </div>
-                ))}
+              <div className="mt-6 flex items-center justify-between text-xs font-mono font-medium text-[#202020] group-hover:translate-x-1 transition-transform">
+                <span>View Chapter</span>
+                <ArrowRight size={14} />
               </div>
-
-            </motion.div>
+            </a>
           ))}
         </div>
 
       </div>
-    </section>
+    </div>
   );
 }
