@@ -22,10 +22,10 @@ export default function Footer() {
   };
 
   return (
-    <footer id="contact" className="w-full bg-[#0b0c10] text-[#E2E2DC] pt-20 pb-12 border-t border-white/10 relative overflow-hidden">
+    <footer id="contact" className="w-full bg-[#FBFBF8] text-[#202020] pt-20 pb-12 border-t border-[#202020]/10 relative overflow-hidden">
       
       {/* Background Grid Pattern */}
-      <div className="absolute inset-0 bg-[url('/footer/bg-footer-pattern.png')] bg-repeat opacity-15 pointer-events-none" />
+      <div className="absolute inset-0 bg-[url('/footer/bg-footer-pattern.png')] bg-repeat opacity-40 pointer-events-none" />
 
       <div className="w-full max-w-[1280px] mx-auto px-5 md:px-8 relative z-10 flex flex-col items-center">
 
@@ -36,11 +36,11 @@ export default function Footer() {
           style={{
             transform: `perspective(1000px) rotateY(${(mousePos.x - 0.5) * 12}deg) rotateX(${(0.5 - mousePos.y) * 12}deg)`
           }}
-          className="w-full rounded-3xl border border-white/20 p-8 md:p-14 text-center flex flex-col items-center justify-center mb-16 shadow-2xl relative overflow-hidden transition-transform duration-200 ease-out bg-[#0e1017]"
+          className="w-full rounded-3xl border border-[#202020]/10 p-8 md:p-14 text-center flex flex-col items-center justify-center mb-16 shadow-xl relative overflow-hidden transition-transform duration-200 ease-out bg-[#F5F5F2]"
         >
           {/* Holographic background overlay image */}
           <div
-            className="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-screen pointer-events-none transition-opacity duration-300 group-hover:opacity-60"
+            className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-multiply pointer-events-none transition-opacity duration-300 group-hover:opacity-50"
             style={{ backgroundImage: "url('/footer/Holo-bg-card.png')" }}
           />
 
@@ -48,30 +48,30 @@ export default function Footer() {
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
-              background: `radial-gradient(600px circle at ${mousePos.x * 100}% ${mousePos.y * 100}%, rgba(56, 189, 248, 0.25), transparent 40%)`
+              background: `radial-gradient(600px circle at ${mousePos.x * 100}% ${mousePos.y * 100}%, rgba(32, 32, 32, 0.08), transparent 40%)`
             }}
           />
 
           <div className="relative z-10 flex flex-col items-center max-w-[720px]">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 font-mono text-xs mb-4">
-              <Sparkles className="w-3.5 h-3.5 animate-spin" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#202020]/5 border border-[#202020]/10 text-[#202020] font-mono text-xs mb-4">
+              <Sparkles className="w-3.5 h-3.5" />
               <span>Let's Build Intelligent Systems Together</span>
             </div>
 
-            <h2 className="text-3xl md:text-5xl font-normal hero-gradient-text leading-tight tracking-tight">
+            <h2 className="text-3xl md:text-5xl font-normal text-[#202020] leading-tight tracking-tight">
               Open for AI/ML Internships & Collaborations
             </h2>
 
-            <p className="mt-4 text-white/70 max-w-[540px] text-sm md:text-base leading-relaxed font-normal">
+            <p className="mt-4 text-[#202020]/70 max-w-[540px] text-sm md:text-base leading-relaxed font-normal">
               Always eager to contribute to cutting-edge machine learning research, open-source projects, and high-impact AI infrastructure.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <a
                 href="mailto:akshai@example.com"
-                className="btn-light-surface inline-flex items-center gap-2.5 h-[48px] px-8 rounded-xl font-medium text-sm md:text-base shadow-lg shadow-cyan-500/15 hover:shadow-cyan-500/30 transition-all text-[#0b0c10]"
+                className="cta-btn inline-flex items-center gap-2.5 h-[48px] px-8 rounded-xl font-medium text-sm md:text-base shadow-md transition-all text-[#FBFBF8]"
               >
-                <Mail className="w-4 h-4 text-[#0b0c10]" />
+                <Mail className="w-4 h-4 text-[#FBFBF8]" />
                 <span>Get In Touch</span>
               </a>
 
@@ -79,31 +79,31 @@ export default function Footer() {
                 href="https://github.com/akshaiganesh/drake"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="glass-pill inline-flex items-center gap-2 h-[48px] px-6 rounded-xl font-medium text-sm text-white hover:bg-white/20 transition-all border border-white/20"
+                className="inline-flex items-center gap-2 h-[48px] px-6 rounded-xl font-medium text-sm text-[#202020] bg-white border border-[#202020]/15 hover:bg-[#F5F5F2] transition-all shadow-xs"
               >
-                <GithubIcon className="w-4 h-4 text-cyan-400" />
+                <GithubIcon className="w-4 h-4 text-[#202020]" />
                 <span>GitHub Repos</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-white/50" />
+                <ArrowUpRight className="w-3.5 h-3.5 text-[#202020]/50" />
               </a>
             </div>
           </div>
         </motion.div>
 
         {/* Footer Navigation Links Grid */}
-        <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-12 pb-8">
+        <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-[#202020]/10 pt-12 pb-8">
           <div>
-            <span className="text-xs font-mono uppercase tracking-wider text-cyan-400 block mb-4">Portfolio</span>
-            <ul className="space-y-2 text-xs md:text-sm text-white/70 font-mono">
-              <li><a href="#projects" className="hover:text-cyan-400 transition-colors">01 / Projects</a></li>
-              <li><a href="#curriculum" className="hover:text-cyan-400 transition-colors">02 / Chapters</a></li>
-              <li><a href="#stack" className="hover:text-cyan-400 transition-colors">03 / Tech Stack</a></li>
-              <li><a href="#contact" className="hover:text-cyan-400 transition-colors">04 / Connect</a></li>
+            <span className="text-xs font-mono uppercase tracking-wider text-[#202020]/50 block mb-4">Portfolio</span>
+            <ul className="space-y-2 text-xs md:text-sm text-[#202020]/75 font-mono">
+              <li><a href="#projects" className="hover:text-black transition-colors">01 / Projects</a></li>
+              <li><a href="#curriculum" className="hover:text-black transition-colors">02 / Chapters</a></li>
+              <li><a href="#stack" className="hover:text-black transition-colors">03 / Tech Stack</a></li>
+              <li><a href="#contact" className="hover:text-black transition-colors">04 / Connect</a></li>
             </ul>
           </div>
 
           <div>
-            <span className="text-xs font-mono uppercase tracking-wider text-cyan-400 block mb-4">Focus Areas</span>
-            <ul className="space-y-2 text-xs md:text-sm text-white/70 font-mono">
+            <span className="text-xs font-mono uppercase tracking-wider text-[#202020]/50 block mb-4">Focus Areas</span>
+            <ul className="space-y-2 text-xs md:text-sm text-[#202020]/75 font-mono">
               <li>Deep Learning</li>
               <li>Large Language Models</li>
               <li>Computer Vision</li>
@@ -112,8 +112,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <span className="text-xs font-mono uppercase tracking-wider text-cyan-400 block mb-4">Frameworks</span>
-            <ul className="space-y-2 text-xs md:text-sm text-white/70 font-mono">
+            <span className="text-xs font-mono uppercase tracking-wider text-[#202020]/50 block mb-4">Frameworks</span>
+            <ul className="space-y-2 text-xs md:text-sm text-[#202020]/75 font-mono">
               <li>PyTorch & CUDA</li>
               <li>HuggingFace Transformers</li>
               <li>OpenCV & YOLOv8</li>
@@ -122,18 +122,18 @@ export default function Footer() {
           </div>
 
           <div>
-            <span className="text-xs font-mono uppercase tracking-wider text-cyan-400 block mb-4">Status</span>
-            <p className="text-xs text-white/60 leading-relaxed font-mono">
+            <span className="text-xs font-mono uppercase tracking-wider text-[#202020]/50 block mb-4">Status</span>
+            <p className="text-xs text-[#202020]/60 leading-relaxed font-mono">
               Student developer learning every day & building real-world AI software.
             </p>
           </div>
         </div>
 
         {/* Bottom Copyright & Credit */}
-        <div className="w-full flex flex-col md:flex-row items-center justify-between border-t border-white/10 pt-8 text-xs text-white/40 font-mono gap-3">
+        <div className="w-full flex flex-col md:flex-row items-center justify-between border-t border-[#202020]/10 pt-8 text-xs text-[#202020]/40 font-mono gap-3">
           <p>© 2026 AI/ML Student Portfolio. All rights reserved.</p>
           <p className="flex items-center gap-1">
-            Built with <Heart className="w-3.5 h-3.5 text-cyan-400 fill-cyan-400" /> React & Vite
+            Built with <Heart className="w-3.5 h-3.5 text-[#202020] fill-[#202020]" /> React & Vite
           </p>
         </div>
 
