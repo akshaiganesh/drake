@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Terminal, Play, Cpu, Brain, Sparkles, ArrowUpRight, Workflow, Bot, FileText, Zap, Code2, Server, Repeat } from 'lucide-react';
+import { Terminal, Play, Brain, Sparkles, ArrowUpRight, Workflow, FileText, Zap, Code2, Server, Repeat } from 'lucide-react';
 
 function GithubIcon({ className = "w-4 h-4" }) {
   return (
@@ -106,77 +106,52 @@ export default function FeatureCards() {
   return (
     <div id="hermes" className="w-full bg-[#FBFBF8]">
 
-      {/* 🌟 CODING AGENT ROSTER SPOTLIGHT 🌟 */}
+      {/* HERMES SPOTLIGHT */}
       <section className="w-full py-16 md:py-24 border-b border-[#202020]/10">
         <div className="w-full max-w-[1280px] mx-auto px-5 md:px-8">
-          <div className="rounded-3xl bg-[#F5F5F2] border border-[#202020]/15 p-8 md:p-14 shadow-lg relative overflow-hidden">
-            <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none hidden md:block">
-              <Sparkles className="w-48 h-48 text-[#202020]" />
-            </div>
+          <div
+            className="rounded-3xl border border-white/10 p-8 md:p-14 shadow-2xl relative overflow-hidden min-h-[400px] flex items-end"
+            style={{
+              backgroundImage: 'url(/hermes-bg.jpg)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center top',
+            }}
+          >
+            {/* Dark overlay for readability */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/20 rounded-3xl" />
 
-            <div className="max-w-[860px]">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#202020]/5 border border-[#202020]/15 text-[#202020] font-mono text-xs mb-4">
+            {/* Content sits above overlay */}
+            <div className="relative z-10 max-w-[720px]">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white/80 font-mono text-xs mb-5 backdrop-blur-sm">
                 <Zap className="w-3.5 h-3.5" />
-                <span>Coding Agent Roster</span>
+                <span>Personal AI Assistant</span>
               </div>
 
-              <h2 className="text-3xl md:text-5xl font-normal text-[#202020] tracking-tight">
-                I code with multiple agents.<br />
-                <span className="font-semibold">Hermes is my favourite. 🤍</span>
+              <h2 className="text-3xl md:text-5xl font-normal text-white tracking-tight leading-tight">
+                Hermes runs on my server.<br />
+                <span className="font-semibold">She works for me, always on.</span>
               </h2>
 
-              <p className="mt-4 text-[#202020]/80 text-base md:text-lg leading-relaxed font-normal">
-                I don't lock myself into one tool. I code alongside <strong>Hermes</strong>, <strong>Cursor</strong>, <strong>Codex</strong>, <strong>AGI (Antigravity)</strong>, and whatever else catches my eye — switching between them, testing their strengths, and seeing how each agent approaches the same problem differently.
+              <p className="mt-4 text-white/75 text-base md:text-lg leading-relaxed font-normal">
+                Hermes is my personal AI assistant — not just a chat tool, but an agent that runs across my home server, handles tasks, manages workflows, and assists with code. She operates in the background so I don't have to.
               </p>
 
-              <p className="mt-3 text-[#202020]/65 text-sm md:text-base leading-relaxed font-normal">
-                Part of it is quota limits (free plans run out fast 😂), but honestly it turned into a genuine obsession. I've started benchmarking agents without even thinking about it — context windows, tool-use accuracy, how they handle ambiguous prompts. Hermes keeps coming back as my go-to, but the squad is real.
+              <p className="mt-3 text-white/55 text-sm md:text-base leading-relaxed font-normal">
+                Built to run persistently as a background service, Hermes bridges my automation stack — connecting with n8n workflows, Python scripts, and APIs to actually get things done while I focus on building.
               </p>
 
-              {/* Quota Jumper Loop Banner */}
-              <div className="mt-6 p-4 rounded-2xl bg-white border border-[#202020]/10 font-mono text-xs md:text-sm text-[#202020] flex items-center gap-3 shadow-xs">
-                <Repeat className="w-5 h-5 text-indigo-600 shrink-0 animate-spin" />
-                <span>
-                  <strong>The Quota Loop:</strong> One quota runs out ➔ install the next agent ➔ test it ➔ compare context windows ➔ accidentally discover another tool ➔ repeat 😂
-                </span>
-              </div>
-
-              {/* Agent Roster Grid */}
-              <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 font-mono text-xs md:text-sm">
-                <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white border-2 border-[#202020]/20 shadow-sm">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
-                  <div>
-                    <span className="block font-semibold text-[#202020]">Hermes</span>
-                    <span className="text-[10px] text-[#202020]/50">Primary fav ✨</span>
-                  </div>
+              <div className="mt-7 grid grid-cols-2 sm:grid-cols-3 gap-3 font-mono text-xs text-white/70">
+                <div className="p-2.5 rounded-xl bg-white/10 border border-white/15 backdrop-blur-sm">
+                  <span className="block font-semibold text-white">Always Running</span>
+                  <span className="text-[10px]">systemd service, 24/7</span>
                 </div>
-                <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-[#202020]/10">
-                  <span className="w-2 h-2 rounded-full bg-blue-400 shrink-0" />
-                  <div>
-                    <span className="block font-semibold text-[#202020]">Cursor</span>
-                    <span className="text-[10px] text-[#202020]/50">Agentic IDE</span>
-                  </div>
+                <div className="p-2.5 rounded-xl bg-white/10 border border-white/15 backdrop-blur-sm">
+                  <span className="block font-semibold text-white">Server-Side</span>
+                  <span className="text-[10px]">Runs on my laptop server</span>
                 </div>
-                <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-[#202020]/10">
-                  <span className="w-2 h-2 rounded-full bg-purple-400 shrink-0" />
-                  <div>
-                    <span className="block font-semibold text-[#202020]">Codex</span>
-                    <span className="text-[10px] text-[#202020]/50">CLI agent</span>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-[#202020]/10">
-                  <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0" />
-                  <div>
-                    <span className="block font-semibold text-[#202020]">AGI / Antigravity</span>
-                    <span className="text-[10px] text-[#202020]/50">Agentic IDE</span>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-[#202020]/10 col-span-2 sm:col-span-1">
-                  <span className="w-2 h-2 rounded-full bg-[#202020]/30 shrink-0" />
-                  <div>
-                    <span className="block font-semibold text-[#202020]">+ whatever's next</span>
-                    <span className="text-[10px] text-[#202020]/50">Always testing 😂</span>
-                  </div>
+                <div className="p-2.5 rounded-xl bg-white/10 border border-white/15 backdrop-blur-sm col-span-2 sm:col-span-1">
+                  <span className="block font-semibold text-white">Workflow-Connected</span>
+                  <span className="text-[10px]">n8n, Python, APIs</span>
                 </div>
               </div>
             </div>
