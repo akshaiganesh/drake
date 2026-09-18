@@ -105,8 +105,8 @@ export default function FeatureCards() {
 
   return (
     <div id="hermes" className="w-full bg-[#FBFBF8]">
-      
-      {/* 🌟 HERMES & CODING AGENT OBSESSION SPOTLIGHT 🌟 */}
+
+      {/* 🌟 CODING AGENT ROSTER SPOTLIGHT 🌟 */}
       <section className="w-full py-16 md:py-24 border-b border-[#202020]/10">
         <div className="w-full max-w-[1280px] mx-auto px-5 md:px-8">
           <div className="rounded-3xl bg-[#F5F5F2] border border-[#202020]/15 p-8 md:p-14 shadow-lg relative overflow-hidden">
@@ -114,44 +114,69 @@ export default function FeatureCards() {
               <Sparkles className="w-48 h-48 text-[#202020]" />
             </div>
 
-            <div className="max-w-[800px]">
+            <div className="max-w-[860px]">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#202020]/5 border border-[#202020]/15 text-[#202020] font-mono text-xs mb-4">
                 <Zap className="w-3.5 h-3.5" />
-                <span>Daily Driver & Agent Obsession</span>
+                <span>Coding Agent Roster</span>
               </div>
 
               <h2 className="text-3xl md:text-5xl font-normal text-[#202020] tracking-tight">
-                Hermes — my daily driver.
+                I code with multiple agents.<br />
+                <span className="font-semibold">Hermes is my favourite. 🤍</span>
               </h2>
 
               <p className="mt-4 text-[#202020]/80 text-base md:text-lg leading-relaxed font-normal">
-                I’m constantly experimenting with different AI coding agents and developer tools. Part of this is because free tier usage quotas hit their limit 😂, but it turned into something I genuinely enjoy.
+                I don't lock myself into one tool. I code alongside <strong>Hermes</strong>, <strong>Cursor</strong>, <strong>Codex</strong>, <strong>AGI (Antigravity)</strong>, and whatever else catches my eye — switching between them, testing their strengths, and seeing how each agent approaches the same problem differently.
+              </p>
+
+              <p className="mt-3 text-[#202020]/65 text-sm md:text-base leading-relaxed font-normal">
+                Part of it is quota limits (free plans run out fast 😂), but honestly it turned into a genuine obsession. I've started benchmarking agents without even thinking about it — context windows, tool-use accuracy, how they handle ambiguous prompts. Hermes keeps coming back as my go-to, but the squad is real.
               </p>
 
               {/* Quota Jumper Loop Banner */}
               <div className="mt-6 p-4 rounded-2xl bg-white border border-[#202020]/10 font-mono text-xs md:text-sm text-[#202020] flex items-center gap-3 shadow-xs">
                 <Repeat className="w-5 h-5 text-indigo-600 shrink-0 animate-spin" />
                 <span>
-                  <strong>The Quota Loop:</strong> One quota runs out ➔ install another agent ➔ test it ➔ compare context windows ➔ accidentally discover another tool ➔ repeat.
+                  <strong>The Quota Loop:</strong> One quota runs out ➔ install the next agent ➔ test it ➔ compare context windows ➔ accidentally discover another tool ➔ repeat 😂
                 </span>
               </div>
 
-              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm font-mono text-[#202020]/80">
-                <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-[#202020]/10">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                  <span>Hermes (Primary Daily Driver)</span>
+              {/* Agent Roster Grid */}
+              <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 font-mono text-xs md:text-sm">
+                <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white border-2 border-[#202020]/20 shadow-sm">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
+                  <div>
+                    <span className="block font-semibold text-[#202020]">Hermes</span>
+                    <span className="text-[10px] text-[#202020]/50">Primary fav ✨</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-[#202020]/10">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                  <span>Testing Agentic IDEs & CLI Tools</span>
+                <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-[#202020]/10">
+                  <span className="w-2 h-2 rounded-full bg-blue-400 shrink-0" />
+                  <div>
+                    <span className="block font-semibold text-[#202020]">Cursor</span>
+                    <span className="text-[10px] text-[#202020]/50">Agentic IDE</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-[#202020]/10">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                  <span>Comparing LLM Context Windows</span>
+                <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-[#202020]/10">
+                  <span className="w-2 h-2 rounded-full bg-purple-400 shrink-0" />
+                  <div>
+                    <span className="block font-semibold text-[#202020]">Codex</span>
+                    <span className="text-[10px] text-[#202020]/50">CLI agent</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-[#202020]/10">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                  <span>Local AI Tools (Ollama & LM Studio)</span>
+                <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-[#202020]/10">
+                  <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0" />
+                  <div>
+                    <span className="block font-semibold text-[#202020]">AGI / Antigravity</span>
+                    <span className="text-[10px] text-[#202020]/50">Agentic IDE</span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-[#202020]/10 col-span-2 sm:col-span-1">
+                  <span className="w-2 h-2 rounded-full bg-[#202020]/30 shrink-0" />
+                  <div>
+                    <span className="block font-semibold text-[#202020]">+ whatever's next</span>
+                    <span className="text-[10px] text-[#202020]/50">Always testing 😂</span>
+                  </div>
                 </div>
               </div>
             </div>
