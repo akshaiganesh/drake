@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Terminal, Cpu, ArrowDownRight, Sparkles } from 'lucide-react';
+import { Cpu, Sparkles } from 'lucide-react';
 
 export default function Hero() {
   const containerRef = useRef(null);
@@ -13,37 +13,6 @@ export default function Hero() {
 
   // Mobile-only: smoothly shift video background from top (sky/clouds) -> middle (tree) -> bottom (laptop)
   const mobileY = useTransform(scrollYProgress, [0, 1], ['0%', '-37.5%']);
-
-  const heroNotifications = [
-    {
-      id: 1,
-      tag: 'Hermes Agent',
-      action: 'Refactoring Python background service & debugging n8n webhook',
-      time: 'Just now',
-      color: 'bg-indigo-50 text-indigo-700 border-indigo-200'
-    },
-    {
-      id: 2,
-      tag: 'Agent Experiment',
-      action: 'Quota ran out on Agent A ➔ installed CLI Agent B ➔ benchmarked context window 😂',
-      time: '3m ago',
-      color: 'bg-purple-50 text-purple-700 border-purple-200'
-    },
-    {
-      id: 3,
-      tag: 'Local AI & LoRA',
-      action: 'Running Llama-3 8B locally via Ollama & experimenting with fine-tuning',
-      time: '12m ago',
-      color: 'bg-blue-50 text-blue-700 border-blue-200'
-    },
-    {
-      id: 4,
-      tag: 'Systemd Service',
-      action: 'Deployed Instagram DM auto-reply bot as systemd daemon on Linux',
-      time: '25m ago',
-      color: 'bg-emerald-50 text-emerald-700 border-emerald-200'
-    }
-  ];
 
   return (
     <div
@@ -73,14 +42,14 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#FBFBF8]/60 via-transparent to-transparent pointer-events-none" />
       </div>
 
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-5 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-5 md:px-8 flex items-center">
 
-        {/* Hero Left Content */}
+        {/* Hero Content */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="lg:col-span-7 max-w-[720px]"
+          className="max-w-[720px]"
         >
           {/* Status Badge */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FBFBF8]/90 border border-[#202020]/15 text-[#202020] text-xs font-mono mb-6 shadow-xs backdrop-blur-md">
@@ -127,57 +96,6 @@ export default function Hero() {
               <span className="block font-mono text-base md:text-lg font-bold text-[#202020]">Python & n8n</span>
               <span className="text-xs text-[#202020]/60 font-mono font-medium">Bots & Workflows</span>
             </div>
-          </div>
-        </motion.div>
-
-        {/* Hero Right Stream Card */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="lg:col-span-5 flex justify-center"
-        >
-          <div className="w-full max-w-[440px] rounded-2xl bg-[#F5F5F2]/90 p-5 border border-[#202020]/15 shadow-xl backdrop-blur-md flex flex-col gap-3.5">
-
-            <div className="flex items-center justify-between border-b border-[#202020]/10 pb-3">
-              <div className="flex items-center gap-2">
-                <Terminal className="w-4 h-4 text-[#202020]" />
-                <span className="text-xs font-mono font-semibold text-[#202020] uppercase tracking-wider">
-                  Live Builder Stream
-                </span>
-              </div>
-              <span className="flex items-center gap-1.5 text-[11px] font-mono text-emerald-700">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-                Active Experiments
-              </span>
-            </div>
-
-            <div className="flex flex-col gap-2.5 max-h-[340px] overflow-y-auto pr-1">
-              {heroNotifications.map((notif) => (
-                <div
-                  key={notif.id}
-                  className="p-3 rounded-xl bg-white/95 border border-[#202020]/10 flex flex-col gap-1 hover:border-[#202020]/30 transition-all group shadow-xs"
-                >
-                  <div className="flex items-center justify-between">
-                    <span className={`text-[10px] font-mono px-2 py-0.5 rounded border ${notif.color}`}>
-                      {notif.tag}
-                    </span>
-                    <span className="text-[10px] font-mono text-[#202020]/40">{notif.time}</span>
-                  </div>
-                  <p className="text-xs text-[#202020]/80 font-mono mt-1 group-hover:text-[#202020] transition-colors">
-                    {notif.action}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <div className="pt-2 border-t border-[#202020]/10 flex items-center justify-between text-[11px] text-[#202020]/50 font-mono">
-              <span>Quota Out ➔ Try New Agent ➔ Repeat</span>
-              <span className="text-[#202020] flex items-center gap-1 font-semibold">
-                Daily <ArrowDownRight className="w-3 h-3" />
-              </span>
-            </div>
-
           </div>
         </motion.div>
 
