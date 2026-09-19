@@ -1,0 +1,18 @@
+[0;1;32m●[0m ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (]8;;file://pie/usr/lib/systemd/system/ssh.service\/usr/lib/systemd/system/ssh.service]8;;\; [0;1;32menabled[0m; preset: [0;1;32menabled[0m)
+     Active: [0;1;32mactive (running)[0m since Sat 2026-09-12 22:42:07 IST; 6 days ago
+ Invocation: 8d366f23335046d593c8fc770bf33dc9
+TriggeredBy: [0;1;32m●[0m ssh.socket
+       Docs: ]8;;man:sshd(8)\man:sshd(8)]8;;\
+             ]8;;man:sshd_config(5)\man:sshd_config(5)]8;;\
+   Main PID: 2329 (sshd)
+      Tasks: 1[0;38:5:245m (limit: 37605)[0m
+     Memory: 1.1M (peak: 2.5M, swap: 104K, swap peak: 104K)
+        CPU: 30ms
+     CGroup: /system.slice/ssh.service
+             └─[0;38:5:245m2329 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"[0m
+
+Sep 12 22:42:07 pie systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
+Sep 12 22:42:07 pie sshd[2329]: Server listening on 0.0.0.0 port 22.
+Sep 12 22:42:07 pie sshd[2329]: Server listening on :: port 22.
+Sep 12 22:42:07 pie systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
