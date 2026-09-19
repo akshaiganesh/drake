@@ -15,8 +15,8 @@ export default function App() {
       {/* Main Portfolio Sections */}
       <main className="flex-1">
         <Hero />
-        <LaptopServer />
         <FeatureCards />
+        <LaptopServer />
         <CompanyGuide />
       </main>
 
