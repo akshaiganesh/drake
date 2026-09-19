@@ -2,6 +2,11 @@
 
 @layer base {
   :root {
+    --font-neoris: 'neoris', 'TT Neoris', 'Inter', sans-serif;
+    --font-departure: 'departureMono', 'Departure Mono', monospace;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --font-sans: 'Inter', sans-serif;
+
     --bg-surface: #FBFBF8;
     --bg-surface-raised: #F5F5F2;
     --text-ink: #202020;
@@ -12,14 +17,34 @@
   body {
     background-color: var(--bg-surface);
     color: var(--text-ink);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: var(--font-sans);
     overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: var(--font-neoris);
   }
 }
 
-/* Typography styles */
-.font-mono-retro {
+/* Cofounder Typography System Utilities */
+.font-neoris {
+  font-family: 'neoris', 'TT Neoris', 'Inter', sans-serif;
+}
+
+.font-departure {
+  font-family: 'departureMono', 'Departure Mono', monospace;
+}
+
+.font-mono-plex {
   font-family: 'IBM Plex Mono', monospace;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-mono-retro {
+  font-family: 'departureMono', 'Departure Mono', monospace;
 }
 
 /* Glass Pill Navigation (Matching cofounder.co) */

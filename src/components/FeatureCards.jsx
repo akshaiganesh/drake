@@ -122,25 +122,25 @@ export default function FeatureCards() {
 
             {/* Content sits above overlay */}
             <div className="relative z-10 max-w-[720px]">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white/80 font-mono text-xs mb-5 backdrop-blur-sm">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white/80 font-departure text-xs mb-5 backdrop-blur-sm">
                 <Zap className="w-3.5 h-3.5" />
                 <span>Personal AI Assistant</span>
               </div>
 
-              <h2 className="text-3xl md:text-5xl font-normal text-white tracking-tight leading-tight">
+              <h2 className="text-3xl md:text-5xl font-neoris font-normal text-white tracking-tight leading-tight">
                 Hermes runs on my server.<br />
                 <span className="font-semibold">She works for me, always on.</span>
               </h2>
 
-              <p className="mt-4 text-white/75 text-base md:text-lg leading-relaxed font-normal">
+              <p className="mt-4 text-white/75 text-base md:text-lg font-inter leading-relaxed font-normal">
                 Hermes is my personal AI assistant — not just a chat tool, but an agent that runs across my home server, handles tasks, manages workflows, and assists with code. She operates in the background so I don't have to.
               </p>
 
-              <p className="mt-3 text-white/55 text-sm md:text-base leading-relaxed font-normal">
+              <p className="mt-3 text-white/55 text-sm md:text-base font-inter leading-relaxed font-normal">
                 Built to run persistently as a background service, Hermes bridges my automation stack — connecting with n8n workflows, Python scripts, and APIs to actually get things done while I focus on building.
               </p>
 
-              <div className="mt-7 grid grid-cols-2 sm:grid-cols-3 gap-3 font-mono text-xs text-white/70">
+              <div className="mt-7 grid grid-cols-2 sm:grid-cols-3 gap-3 font-mono-plex text-xs text-white/70">
                 <div className="p-2.5 rounded-xl bg-white/10 border border-white/15 backdrop-blur-sm">
                   <span className="block font-semibold text-white">Always Running</span>
                   <span className="text-[10px]">systemd service, 24/7</span>
@@ -165,14 +165,14 @@ export default function FeatureCards() {
           
           {/* Section Header */}
           <div className="flex flex-col items-center text-center max-w-[680px] mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#202020]/5 border border-[#202020]/10 text-[#202020] font-mono text-xs mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#202020]/5 border border-[#202020]/10 text-[#202020] font-departure text-xs mb-3">
               <Code2 className="w-3.5 h-3.5" />
               <span>Things I Actually Build</span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-normal text-[#202020] tracking-tight">
+            <h2 className="text-3xl md:text-5xl font-neoris font-normal text-[#202020] tracking-tight">
               Build ➔ Break ➔ Fix ➔ Learn
             </h2>
-            <p className="mt-3 text-[#202020]/60 text-sm md:text-base font-normal">
+            <p className="mt-3 text-[#202020]/60 text-sm md:text-base font-inter font-normal">
               I learn best by making things. I take an idea, build it, see what breaks, and understand why it works.
             </p>
           </div>

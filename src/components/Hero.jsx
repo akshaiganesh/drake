@@ -52,20 +52,20 @@ export default function Hero() {
           className="max-w-[720px]"
         >
           {/* Status Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FBFBF8]/90 border border-[#202020]/15 text-[#202020] text-xs font-mono mb-6 shadow-xs backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FBFBF8]/90 border border-[#202020]/15 text-[#202020] text-xs font-departure mb-6 shadow-xs backdrop-blur-md">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
             <span>17 y/o Student • 12th Grade Builder</span>
           </div>
 
-          <h1 className="m-0 font-normal text-[34px] sm:text-[44px] lg:text-[54px] leading-[112%] tracking-tight text-[#202020] text-left drop-shadow-xs">
+          <h1 className="m-0 font-neoris font-normal text-[36px] sm:text-[48px] lg:text-[58px] leading-[108%] tracking-tight text-[#202020] text-left drop-shadow-xs">
             I’m 17. I <span className="font-semibold underline decoration-2 decoration-[#202020]/30 underline-offset-4">build things, break them, fix them</span>, and learn as I go.
           </h1>
 
-          <p className="mt-5 max-w-[580px] text-left text-[15px] md:text-[17px] font-normal leading-[155%] text-[#202020]/80 font-sans backdrop-blur-[2px]">
+          <p className="mt-5 max-w-[580px] text-left text-[15px] md:text-[17px] font-inter font-normal leading-[155%] text-[#202020]/80 backdrop-blur-[2px]">
             12th-grade student obsessed with AI/ML, coding agents, n8n automation, local LLMs, and Python services. Currently driving Hermes, jumping quotas, and figuring out what happens under the hood.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3">
+          <div className="mt-8 flex flex-wrap items-center gap-3 font-inter">
             <a
               href="#projects"
               className="cta-btn inline-flex items-center justify-center gap-2 h-[44px] px-6 rounded-[10px] text-[15px] font-medium shadow-md transition-all"
@@ -85,16 +85,16 @@ export default function Hero() {
           {/* Persona Stack Highlights */}
           <div className="mt-10 pt-6 border-t border-[#202020]/15 grid grid-cols-3 gap-4 max-w-[520px]">
             <div>
-              <span className="block font-mono text-base md:text-lg font-bold text-[#202020]">Hermes</span>
-              <span className="text-xs text-[#202020]/60 font-mono font-medium">Daily Dev Companion</span>
+              <span className="block font-mono-plex text-base md:text-lg font-bold text-[#202020]">Hermes</span>
+              <span className="text-xs text-[#202020]/60 font-mono-plex font-medium">Daily Dev Companion</span>
             </div>
             <div>
-              <span className="block font-mono text-base md:text-lg font-bold text-[#202020]">Quota Jumper</span>
-              <span className="text-xs text-[#202020]/60 font-mono font-medium">Agent Tester 😂</span>
+              <span className="block font-mono-plex text-base md:text-lg font-bold text-[#202020]">Quota Jumper</span>
+              <span className="text-xs text-[#202020]/60 font-mono-plex font-medium">Agent Tester 😂</span>
             </div>
             <div>
-              <span className="block font-mono text-base md:text-lg font-bold text-[#202020]">Python & n8n</span>
-              <span className="text-xs text-[#202020]/60 font-mono font-medium">Bots & Workflows</span>
+              <span className="block font-mono-plex text-base md:text-lg font-bold text-[#202020]">Python & n8n</span>
+              <span className="text-xs text-[#202020]/60 font-mono-plex font-medium">Bots & Workflows</span>
             </div>
           </div>
         </motion.div>
