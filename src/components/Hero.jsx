@@ -38,7 +38,7 @@ export default function Hero() {
     <div id="site-hero" className="relative w-full min-h-[640px] md:min-h-[720px] bg-[#FBFBF8] pb-16 pt-28 md:pt-36 flex items-center justify-center overflow-hidden border-b border-[#202020]/10">
 
       {/* Main Video Artwork */}
-      <div className="absolute inset-0 z-0 opacity-85 pointer-events-none">
+      <div className="absolute inset-0 z-0 opacity-100 pointer-events-none">
         <video
           autoPlay
           loop
@@ -50,7 +50,7 @@ export default function Hero() {
           <source src={`${import.meta.env.BASE_URL}hero/cofounder-2-hero.webm`} type="video/webm" />
           <source src={`${import.meta.env.BASE_URL}hero/cofounder-2-hero.mp4`} type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#FBFBF8] via-[#FBFBF8]/20 to-[#FBFBF8]/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#FBFBF8]/60 via-transparent to-transparent" />
       </div>
 
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-5 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
